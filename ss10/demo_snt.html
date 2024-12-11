@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // số snt là số chỉ chỉ chia hết cho 1 và chính nó
+    // => chỉ có 2 ước : 1 và chính nó
+    // => 2,3,5,7,11,13...........
+    // n => tìm ước của n : => n%
+    // tìm ước của một số n
+
+    // in ra 10 snt đầu tiên trong dãy số tự nhiên;
+    // 0,1,2,3,4,5,6,7,8,9.....
+    let number = 2;
+    let soLuongSNTCanIn = +prompt("nhập số lượng snt cần in")
+    let soLuongSNTTimDuoc = 0;
+    let ketQua = "";
+    while (soLuongSNTTimDuoc < soLuongSNTCanIn) {
+        let count = 0;
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            soLuongSNTTimDuoc++;
+            if (soLuongSNTCanIn==soLuongSNTTimDuoc){
+                ketQua += number;
+            }else {
+                ketQua += number + ",";
+            }
+        }
+        number++;
+    }
+    console.log(ketQua);
+
+    // let n =+prompt("nhập số n");
+    // let count =0;
+    // for (let i = 2; i <n ; i++) {
+    //     if (n%i==0){
+    //         count ++;
+    //     }
+    // }
+    // if (count==0){
+    //     console.log(n + ": là số nt")
+    // }else {
+    //     console.log(n + " : khong phai la snt")
+    // }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="hello">Hello</p>
+<input id="ten" placeholder="enter name" onchange="myFunction()">
+<button onclick="myFunction()">Change</button>
+<script>
+    // output
+    // document.write("Hello codegym");
+    // alert("Hello Codegym");
+    // console.log("Hello")
+    // document.getElementById("hello").innerHTML ="<button>Click</button>"
+    // input:
+    //  let ten = prompt("nhap ten");
+    //  document.getElementById("hello").innerHTML= ten;
+
+    // Hàm gồm các câu lệnh => thực thi khi đươc gọi
+
+    function myFunction (){
+      document.getElementById("hello").innerText = document.getElementById("ten").value;
+
+    }
+
+    // let conf =confirm("bạn có muốn xáo ??")
+    // alert(conf);
+    // tính điểm trung bình của 3 mốn toán lý hoá
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="n1">
+<input id="n2">
+<button onclick="tinhToan('+')">+</button>
+<button onclick="tinhToan('-')">-</button>
+<script>
+
+    function tinhToan(phepTinh){
+        let n1 =+document.getElementById("n1").value;
+        let n2 =+document.getElementById("n2").value;
+        let str = n1+phepTinh+n2;
+        alert(eval(str))
+    }
+    // khai báo hằng
+    // const PI=3.1415;
+    // const HANG_SO= 12.34;
+    // var number; // khai báo
+    // number =10; // gán/ khởi tạo giá trị
+    // var number1 =20;//
+    // var number1=30; // ok
+    // alert(number1);
+  // var có cơ chế hoisting, let thì không
+  //   str ="hello";
+  //   alert(str);
+  //   var str;
+
+    // if (true){
+    //     let i =10;
+    //     alert(i)
+    // }
+    // alert(i)
+    // toán tử typeof
+    // let str = "hello";// string
+    // alert(typeof str);
+    // str =10;
+    // alert(typeof str);
+    // Các loại toán tử
+     // số học : +,-,x,/%,++, --
+     // so sánh : <,<=,>,>=,==,===,!=,!==
+    // logic: &&,||, !
+    // gán: =, +=,-=,*=,/=
+    // công chuỗi :
+    // toán tử typeof
+    // let a =1;
+    // let b=1;
+    // let c= ++a + --b + ++a; //2 +3 =5
+    // alert(a)
+    // alert(b)
+    // alert(c)
+    // a:3
+    // b:0
+    //c:5
+
+    // sh, ss, logic, gan
+    // let x =3;
+    // let y =2;
+    // let z = 1;
+    // let k = x+3*y-z>3||y+x*2>9; //
+    //        8>3|| 8>9
+    //         true || false => true
+    // => 1225
+    // y = y+10; // y+=10;
+    // let b =true;// boolean
+    //  b =!b;
+
+     // alert("kết quả của z là : "+ z)
+     // alert(`kết quả của z là : ${z}`)
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
