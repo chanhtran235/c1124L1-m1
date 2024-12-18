@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // THAM TRỊ
+    function change1(a,b) {
+            let tem =a;
+            a =b;
+            b= tem;
+        console.log("------bên trong hàm--------" +a +","+b)
+    }
+
+
+    // let x = 10;
+    // let y = 1000;
+    // change1(x,y);
+    // console.log(x); //11;
+    // console.log(y); //11;
+    // tham chiếu: tham số đối tượng
+    function change2 (arr){
+        let tem = arr[0];
+       arr[0] = arr[1];
+       arr[1] = tem;
+    }
+    let array = [100,200];
+    change2(array);
+    console.log("ngoài hàm: "+ array);//[100,200]
+
+
+
+</script>
+</body>
+</html>

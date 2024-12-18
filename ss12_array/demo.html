@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let array = [50,11,100,20,40,100];
+    //
+    // array.sort(function (a,b) {
+    //      return a-b;
+    // })
+
+    // array.reverse();
+    //
+    // console.log(array)
+    // // let check = array.includesd(100)
+    // let check = array.indexOf(100)
+    // alert(check)
+    // thêm pt : push,unshift, splice
+    // xoá pt : pop, shift, splice
+    // sort, reverse, concat, include
+
+    // mảng 2 chiều là mảng 1 chiều, bên trong các phần tử là mảng chiều
+    let p = ["sam sung", "Nokia"]
+    let arr = [
+        [1,"Sam sung",1000],
+        [1,"Nokia",1000],
+    ]
+    let array2 = new Array(3);
+    for (let i = 0; i <array2.length ; i++) {
+        array2[i] = new Array(4);
+        for (let j = 0; j <array2[i].length ; j++) {
+            array2[i][j] = + prompt("nhập giá trị " +i+ ":"+j)
+        }
+    }
+    console.log(array2);
+
+</script>
+</body>
+</html>

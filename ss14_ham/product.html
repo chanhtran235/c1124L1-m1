@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="name" placeholder="nhập tên">
+<button onclick="addNewProduct()">Save</button>
+<span>Số lương: </span><span id="soLuong"></span>
+<p id="display"></p>
+<script>
+    let productList = ["sam sung", "nokia"," iphone"];
+    display();
+    function addNewProduct() {
+        let productName = document.getElementById("name").value;
+        productList.push(productName);
+        display();
+    }
+    function display(){
+        let tableString = `<table border="1" style="border-collapse: collapse;">
+                            <tr>
+                                <th>STT</th>
+                                <th>Name</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>`;
+        for (let i = 0; i <productList.length ; i++) {
+            tableString += ` <tr>
+                            <td>${i+1}</td>
+                            <td>${productList[i]}</td>
+                            <td><button>Edit</button></td>
+                            <td><button onclick="deleteProduct(${i})">Delete</button></td>
+                        </tr>`
+        }
+        tableString +=`</table>`
+
+        document.getElementById("display").innerHTML = tableString;
+        document.getElementById("soLuong").innerText = productList.length;
+    }
+    function deleteProduct(index) {
+        const  conf = confirm(`Bạn có muốn xoá sp :${productList[index]}???`)
+        if (conf){
+            productList.splice(index,1);
+            display();
+        }
+    }
+
+
+</script>
+</body>
+</html>
